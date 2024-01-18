@@ -59,7 +59,7 @@ const EventbriteIntegration = () => {
         <ul>
           <li>ID: {user.id}</li>
           <li>Name: {user.name}</li>
-          <li>Name: {user.events}</li>
+          <li>Events: {user.events}</li>
         </ul>
       ) : null}
     </div>
