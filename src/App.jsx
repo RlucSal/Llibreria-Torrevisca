@@ -8,8 +8,8 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import NavbarEl from "./Components/NavbarEl";
 import Wrapper from "./Components/Wrapper";
-import EventPage from "./Pages/EventPage";
 import "./app.css";
+import EventbriteIntegration from "./Pages/EventbriteIntegration";
 
 const App = () => {
   return (
@@ -21,7 +21,10 @@ const App = () => {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/log-in" element={<LogIn />} />
           <Route path="/product-catalogue" element={<ProductCatalogue />} />
-          <Route path="/event" element={<EventPage />} />
+          <Route
+            path="/EventbriteIntegration"
+            element={<EventbriteIntegration />}
+          />
         </Routes>
       </Router>
       <Footer />
