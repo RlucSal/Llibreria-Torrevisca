@@ -1,12 +1,13 @@
+import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 // Authorization= Bearer UI75IFUFEDQBJZU3ICFY
 // API key =" VAJ47MAGSSUQJZTSF5"
 // Client secret = "33QCUW6RBQRKCAJBRT5R2DANF7SUUWFQX6TAVEUJ7XX5R22JYO"
 // Private token = "UI75IFUFEDQBJZU3ICFY"
 // Public token "CAH3V4XQQB4K6CE5E44M"
 // User Id = "564193004749"
-
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 const EventbriteIntegration = () => {
   const [user, setUser] = useState(null);

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Card, Alert, Container } from "react-bootstrap";
+import "../app.css";
 
 const LogIn = () => {
   const emailRef = useRef();

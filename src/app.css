@@ -1,0 +1,67 @@
+/* ---- DEFAULT COLOURS ---- */
+.green-bg {
+    background-color: #706233 !important;
+}
+
+.brown-bg {
+    background-color: #B0926A !important;
+}
+
+.yellow-bg {
+    background-color: #E1C78F !important;
+}
+
+.beige-bg {
+    background-color: #FAE7C9 !important;
+}
+
+.green-text {
+    color: #706233 !important;
+}
+
+.brown-text {
+    color: #B0926A !important;
+}
+
+.yellow-text {
+    color: #E1C78F !important;
+}
+
+.beige-text {
+    color: #FAE7C9 !important;
+}
+
+/* ----------------- */
+
+.logo {
+    max-width: 200px;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.sign-up-button {
+    border-color: #B0926A !important;
+}
+
+h1 {
+    padding:5%;
+}
+
+.shop-photo {
+    width: 80%;
+}
+
+.page-container {
+    min-width: 100%;
+}
+
+.photo-container {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}

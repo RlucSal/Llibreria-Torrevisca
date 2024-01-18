@@ -1,0 +1,9 @@
+.link {
+    text-decoration: none;
+    padding-left: 20%;
+    white-space: nowrap;
+}
+
+.nav {
+    background-color: transparent;
+}

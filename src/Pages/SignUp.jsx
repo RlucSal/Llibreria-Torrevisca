@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate, Link } from "react-router-dom";
+import "../app.css";
 import {
   Container,
   Card,
