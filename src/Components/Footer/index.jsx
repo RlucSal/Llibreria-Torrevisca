@@ -1,9 +1,14 @@
 import React from "react";
+import "./style.css"
+import "../../app.css"
+
 const Footer = () => {
   return (
-    <>
-      <h1>This is Footer</h1>
-    </>
+    <div className="wrapper green-bg">
+      <footer className="footer beige-bg green-text">
+        <h6>Llibreria Torrevisca 2024</h6>
+      </footer>
+    </div>
   );
 };
 
