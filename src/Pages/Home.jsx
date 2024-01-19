@@ -19,7 +19,7 @@ const Home = () => {
         </div>
         <div className="buttonContainer">
           <Button
-            className="sign-up-button w-50 brown-bg"
+            className="no-button-outline w-50 brown-bg"
             type="button"
             onClick={handleSignUpClick}
           >
