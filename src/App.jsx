@@ -4,6 +4,7 @@ import SignUp from "./Pages/SignUp";
 import LogIn from "./Pages/LogIn";
 import Home from "./Pages/Home";
 import ProductCatalogue from "./Pages/ProductCatalogue";
+import Books from "./Pages/Books"
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import NavbarEl from "./Components/NavbarEl";
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/log-in" element={<LogIn />} />
           <Route path="/product-catalogue" element={<ProductCatalogue />} />
+          <Route path="/books" element={<Books />} />
           <Route
             path="/EventbriteIntegration"
             element={<EventbriteIntegration />}
