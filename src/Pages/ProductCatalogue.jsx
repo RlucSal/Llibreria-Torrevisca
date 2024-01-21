@@ -154,10 +154,8 @@ function ProductCatalogue() {
 
           </Row>
         </>
-
       )
       }
-      {/* Other JSX */}
     </Container >
   );
 }
