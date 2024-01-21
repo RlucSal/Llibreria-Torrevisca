@@ -17,15 +17,6 @@ const Home = () => {
         <div className="align-container">
           <img className="shop-photo" src="/imgs/shop_photo.jpg"></img>
         </div>
-        <div className="buttonContainer">
-          <Button
-            className="no-button-outline w-50 brown-bg"
-            type="button"
-            onClick={handleSignUpClick}
-          >
-            Be part of our community
-          </Button>
-        </div>
       </Container>
     </>
   );
