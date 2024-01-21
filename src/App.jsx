@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import SignUp from "./Pages/SignUp";
 import LogIn from "./Pages/LogIn";
 import Home from "./Pages/Home";
@@ -13,7 +18,6 @@ import Footer from "./Components/Footer";
 import NavbarEl from "./Components/NavbarEl";
 import Wrapper from "./Components/Wrapper";
 import "./app.css";
-import EventbriteIntegration from "./Pages/EventbriteIntegration";
 
 // Scrolls to the top when a new page is opened
 const ScrollToTop = () => {

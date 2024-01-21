@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
 import { Container } from "react-bootstrap";
 import "../app.css";
@@ -7,12 +7,10 @@ import { Col } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
-import { Link } from 'react-router-dom';
-import BookCard from '../Components/BookCard'
-
+import { Link } from "react-router-dom";
+import BookCard from "../Components/BookCard";
 
 function ProductCatalogue() {
-
   const [searchResults, setSearchResults] = useState([]);
   const [noResults, setNoResults] = useState(false);
 
@@ -42,8 +40,11 @@ function ProductCatalogue() {
     const productsRef = ref(db, "products");
     onValue(productsRef, (snapshot) => {
       const data = snapshot.val();
-      const filteredResults = Object.values(data).filter(product => {
-        return product.name.includes(searchInput) || product.author.includes(searchInput);
+      const filteredResults = Object.values(data).filter((product) => {
+        return (
+          product.name.includes(searchInput) ||
+          product.author.includes(searchInput)
+        );
       });
       if (filteredResults.length === 0) {
         setNoResults(true);
@@ -51,8 +52,6 @@ function ProductCatalogue() {
         setNoResults(false);
         setSearchResults(filteredResults);
       }
-
-
     });
   }
 
@@ -70,25 +69,33 @@ function ProductCatalogue() {
             </Form.Group>
           </Col>
           <Col>
-            <Button className="no-button-outline brown-bg" id="input" type="submit">
+            <Button
+              className="no-button-outline brown-bg"
+              id="input"
+              type="submit"
+            >
               Submit
             </Button>
           </Col>
         </Row>
       </Form>
 
-      {noResults && <Container className='no-results'>
-        <Card className='beige-text brown-bg w-100'>
-          <Card.Title className='p-3'>No results found!</Card.Title>
-        </Card>
-      </Container>}
-
+      {noResults && (
+        <Container className="no-results">
+          <Card className="beige-text brown-bg w-100">
+            <Card.Title className="p-3">No results found!</Card.Title>
+          </Card>
+        </Container>
+      )}
 
       {/* Display category cards until a search is made */}
       {searchResults.length > 0 ? (
         <Row>
-          <Link className='link beige-text' onClick={handleRefresh}><i className="fa-solid fa-arrow-left-long beige-text"></i> Back to Categories</Link>
-          {searchResults.map(product => (
+          <Link className="link beige-text" onClick={handleRefresh}>
+            <i className="fa-solid fa-arrow-left-long beige-text"></i> Back to
+            Categories
+          </Link>
+          {searchResults.map((product) => (
             <BookCard
               key={product.id}
               name={product.name}
@@ -107,7 +114,9 @@ function ProductCatalogue() {
                 <Card className="no-button-outline">
                   <Card.Img src="/imgs/bookshelf.PNG" />
                   <Card.ImgOverlay className="content">
-                    <Card.Body><h1 className="title beige-text">Books</h1></Card.Body>
+                    <Card.Body>
+                      <h1 className="title beige-text">Books</h1>
+                    </Card.Body>
                   </Card.ImgOverlay>
                 </Card>
               </Link>
@@ -118,7 +127,9 @@ function ProductCatalogue() {
                 <Card className="no-button-outline">
                   <Card.Img src="/imgs/toys.PNG" />
                   <Card.ImgOverlay className="content">
-                    <Card.Body><h1 className="title beige-text">Toys</h1></Card.Body>
+                    <Card.Body>
+                      <h1 className="title beige-text">Toys</h1>
+                    </Card.Body>
                   </Card.ImgOverlay>
                 </Card>
               </Link>
@@ -126,16 +137,17 @@ function ProductCatalogue() {
           </Row>
 
           <Row>
-            <div style={{ padding: '1%' }} />
+            <div style={{ padding: "1%" }} />
           </Row>
           <Row>
-
             <Col>
               <Link to="/stationary">
                 <Card className="no-button-outline">
                   <Card.Img src="/imgs/stationary.PNG" />
                   <Card.ImgOverlay className="content">
-                    <Card.Body><h1 className="title beige-text">Stationary</h1></Card.Body>
+                    <Card.Body>
+                      <h1 className="title beige-text">Stationary</h1>
+                    </Card.Body>
                   </Card.ImgOverlay>
                 </Card>
               </Link>
@@ -146,19 +158,18 @@ function ProductCatalogue() {
                 <Card className="no-button-outline">
                   <Card.Img src="/imgs/homeware.PNG" />
                   <Card.ImgOverlay className="content">
-                    <Card.Body><h1 className="title beige-text">Homeware</h1></Card.Body>
+                    <Card.Body>
+                      <h1 className="title beige-text">Homeware</h1>
+                    </Card.Body>
                   </Card.ImgOverlay>
                 </Card>
               </Link>
             </Col>
-
           </Row>
         </>
-
-      )
-      }
+      )}
       {/* Other JSX */}
-    </Container >
+    </Container>
   );
 }
 
