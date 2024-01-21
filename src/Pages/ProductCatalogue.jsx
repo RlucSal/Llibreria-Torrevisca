@@ -8,7 +8,7 @@ import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import BookCard from "../Components/BookCard";
+import ProductCard from "../Components/ProductCard";
 
 function ProductCatalogue() {
   const [searchResults, setSearchResults] = useState([]);
@@ -43,12 +43,14 @@ function ProductCatalogue() {
       const filteredResults = Object.values(data).filter((product) => {
         return (
           product.name.includes(searchInput) ||
-          product.author.includes(searchInput)
+          product.author.includes(searchInput) ||
+          product.make.includes(searchInput)
         );
       });
       if (filteredResults.length === 0) {
         setNoResults(true);
       } else {
+        console.log(filteredResults);
         setNoResults(false);
         setSearchResults(filteredResults);
       }
@@ -96,10 +98,11 @@ function ProductCatalogue() {
             Categories
           </Link>
           {searchResults.map((product) => (
-            <BookCard
+            <ProductCard
               key={product.id}
               name={product.name}
               author={product.author}
+              make={product.make}
               publisher={product.publisher}
               price={product.price}
             />
@@ -167,9 +170,8 @@ function ProductCatalogue() {
             </Col>
           </Row>
         </>
-      )
-      }
-    </Container >
+      )}
+    </Container>
   );
 }
 
