@@ -13,7 +13,7 @@ import Books from "./Pages/ProductCategories/Books";
 import Toys from "./Pages/ProductCategories/Toys";
 import Stationary from "./Pages/ProductCategories/Stationary";
 import Homeware from "./Pages/ProductCategories/Homeware";
-import Header from "./Components/Header";
+import Events from "./Pages/Events";
 import Footer from "./Components/Footer";
 import NavbarEl from "./Components/NavbarEl";
 import Wrapper from "./Components/Wrapper";
@@ -45,10 +45,7 @@ const App = () => {
           <Route path="/toys" element={<Toys />} />
           <Route path="/stationary" element={<Stationary />} />
           <Route path="/homeware" element={<Homeware />} />
-          <Route
-            path="/EventbriteIntegration"
-            element={<EventbriteIntegration />}
-          />
+          <Route path="/events" element={<Events />} />
         </Routes>
       </Router>
       <Footer />
