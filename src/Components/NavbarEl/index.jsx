@@ -20,7 +20,7 @@ function NavbarEl() {
             <Link className="link beige-text" to="product-catalogue">
               Product Catalogue
             </Link>
-            <Link className="link beige-text" to="EventbriteIntegration">
+            <Link className="link beige-text" to="events">
               Events
             </Link>
           </Nav>

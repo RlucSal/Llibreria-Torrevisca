@@ -4,12 +4,12 @@ import SignUp from "./Pages/SignUp";
 import LogIn from "./Pages/LogIn";
 import Home from "./Pages/Home";
 import ProductCatalogue from "./Pages/ProductCatalogue";
+import Events from "./Pages/Events";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import NavbarEl from "./Components/NavbarEl";
 import Wrapper from "./Components/Wrapper";
 import "./app.css";
-import EventbriteIntegration from "./Pages/EventbriteIntegration";
 
 const App = () => {
   return (
@@ -21,10 +21,7 @@ const App = () => {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/log-in" element={<LogIn />} />
           <Route path="/product-catalogue" element={<ProductCatalogue />} />
-          <Route
-            path="/EventbriteIntegration"
-            element={<EventbriteIntegration />}
-          />
+          <Route path="/events" element={<Events />} />
         </Routes>
       </Router>
       <Footer />
