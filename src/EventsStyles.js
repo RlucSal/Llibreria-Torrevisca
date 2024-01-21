@@ -5,9 +5,10 @@ const EventsStyles = (
   showSingleGalleryImage
 ) => {
   const bodyStyle = {
-    backgroundImage: `url('/imgs/CultEv.png')`,
+    backgroundImage: `url('/imgs/.png')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    backgroundColor: "#706233 ",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
@@ -17,7 +18,7 @@ const EventsStyles = (
 
   const h1Style = {
     position: "absolute",
-    top: "10%",
+    top: "18%",
     left: "25%",
     transform: "translateX(-50%)",
     color: "#ffffff",
@@ -25,7 +26,7 @@ const EventsStyles = (
 
   const h1Style1 = {
     position: "absolute",
-    top: "40%",
+    top: "48%",
     left: "25%",
     transform: "translateX(-50%)",
     color: "#ffffff",
@@ -128,7 +129,7 @@ const EventsStyles = (
     alignItems: "center",
     overflow: "hidden",
     borderRadius: "50%",
-    border: "4px solid  #706233",
+    border: "4px solid #B0926A",
   };
 
   const imageStyle = {
@@ -147,6 +148,11 @@ const EventsStyles = (
     justifyContent: "center",
     alignItems: "center",
   };
+  const carouselOverrideStyle = {
+    "&:hover .control-arrow": {
+      display: "none  !important",
+    },
+  };
 
   return {
     bodyStyle,
@@ -163,7 +169,10 @@ const EventsStyles = (
     cardImgStyle,
     singleGalleryImageStyle,
     imageStyle,
-    imageCarouselStyle,
+    imageCarouselStyle: {
+      ...imageCarouselStyle,
+      ...carouselOverrideStyle,
+    },
   };
 };
 

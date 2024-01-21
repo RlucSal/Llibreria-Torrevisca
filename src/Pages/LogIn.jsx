@@ -1,8 +1,15 @@
 import React, { useRef, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import { Form, Button, Card, Alert, Container } from "react-bootstrap";
-import "../app.css";
+import {
+  Form,
+  Button,
+  Card,
+  Alert,
+  Container,
+  Col,
+  Row,
+} from "react-bootstrap";
+import { useNavigate, Link } from "react-router-dom";
 
 const LogIn = () => {
   const emailRef = useRef();
@@ -38,17 +45,17 @@ const LogIn = () => {
       <Container
         fluid
         className="d-flex align-items-center justify-content-center"
-        style={{ minHeight: "100vh ", backgroundColor: "green" }}
+        style={{
+          minHeight: "100vh",
+          backgroundImage: `url('/imgs/baloon-no.png')`,
+          backgroundSize: "cover", // Adjust as needed
+          backgroundPosition: "center", // Adjust as needed
+        }}
       >
         <div className="w-100" style={{ maxWidth: "400px" }}>
-          <Card
-            bg="light"
-            text="dark"
-            style={{ opacity: 0.8 }}
-            className="rounded shadow"
-          >
+          <Card bg="light" text="dark" className="rounded shadow">
             <Card.Body>
-              <h2 className="text-center mb-4">Log In</h2>
+              <h2 className="text-center mb-4">Wellcome back</h2>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleLogin}>
                 <Form.Group id="email">
@@ -62,11 +69,18 @@ const LogIn = () => {
                 <Button
                   className="w-100"
                   type="submit"
-                  style={{ backgroundColor: "green" }}
+                  style={{ backgroundColor: "#B0926A " }}
                 >
-                  Log In
+                  Continue
                 </Button>
               </Form>
+              <Row className="mb-3">
+                <Col className="text-center mb-2">
+                  <p>
+                    Don't have an account? <Link to="/sign-up">Sign Up</Link>
+                  </p>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </div>
