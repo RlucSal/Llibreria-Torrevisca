@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { getDatabase, ref, onValue } from "firebase/database";
 import { Container } from "react-bootstrap";
-import "../app.css";
+import "../../app.css";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Form } from "react-bootstrap";
@@ -10,7 +10,7 @@ import { Card } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 
-function Books() {
+function Toys() {
 
   // database configuration and info retrieval
   const db = getDatabase();
@@ -39,12 +39,15 @@ function Books() {
 
   return (
     <Container>
-      <h1 className="beige-text">Product Catalogue</h1>
-      <h3 className="beige-text p-5">Books</h3>
+      <h1 className="beige-text page-title">Product Catalogue</h1>
+      <Link className='link beige-text' to={'/product-catalogue'}><i className="fa-solid fa-arrow-left-long beige-text"></i> Back to Categories</Link>
+      <div className='align-container'>
+              <h2 className="beige-text category">Toys</h2>
+      </div>
 
 
     </Container>
   )
 }
 
-export default Books;
+export default Toys;

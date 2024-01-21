@@ -14,13 +14,13 @@ function NavbarEl() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="link beige-text" to="/">
+            <Link className="navlink beige-text" to="/">
               Home
             </Link>
-            <Link className="link beige-text" to="product-catalogue">
+            <Link className="navlink beige-text" to="product-catalogue">
               Product Catalogue
             </Link>
-            <Link className="link beige-text" to="EventbriteIntegration">
+            <Link className="navlink beige-text" to="EventbriteIntegration">
               Events
             </Link>
           </Nav>

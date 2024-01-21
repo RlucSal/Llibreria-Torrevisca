@@ -86,4 +86,25 @@
     padding-bottom: 2%;
 }
 
+.link {
+    text-decoration: none;
+    font-size: large;
+    padding-bottom: 3%;
+}
 
+.link:hover {
+    text-decoration: underline;
+}
+
+.category {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.page-title {
+    padding-bottom: 1%;
+}
+
+.no-results {
+    padding-bottom: 3%;
+}
