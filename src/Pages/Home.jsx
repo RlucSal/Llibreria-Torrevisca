@@ -14,12 +14,12 @@ const Home = () => {
     <>
       <Container className="page-container beige-bg">
         <h1 className="green-text">Home</h1>
-        <div className="photo-container">
+        <div className="align-container">
           <img className="shop-photo" src="/imgs/shop_photo.jpg"></img>
         </div>
         <div className="buttonContainer">
           <Button
-            className="sign-up-button w-50 brown-bg"
+            className="no-button-outline w-50 brown-bg"
             type="button"
             onClick={handleSignUpClick}
           >
