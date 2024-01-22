@@ -3,8 +3,6 @@
 ## Description:
 
 Website for a bookshop. Designed with the intention to improve customer experience while simplifying the tracking of stock levels.
-<br>
-<br>
 
 ## Screenshot:
 
@@ -28,6 +26,7 @@ _// placeholder //_
 - Kane
 
 ## FAQ:
+_// placeholder //_
 
 ## Licensing:
 
