@@ -123,7 +123,7 @@ const Events = () => {
   );
 
   return (
-    <body style={bodyStyle}>
+    <div style={bodyStyle}>
       <Container fluid className="page-container beige-bg">
         <div className="photo-container"> </div>
         <h1 className="beige-text" style={h1Style}>
@@ -340,7 +340,7 @@ const Events = () => {
           </div>
         </Container>
       </Row>
-    </body>
+    </div>
   );
 };
 

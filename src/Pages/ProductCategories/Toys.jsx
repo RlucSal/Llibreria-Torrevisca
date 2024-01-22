@@ -4,19 +4,26 @@ import { Container } from "react-bootstrap";
 import "../../app.css";
 import { Link } from "react-router-dom";
 import ProductCard from "../../Components/ProductCard";
+import { Row } from "react-bootstrap";
 
 function Toys() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const db = getDatabase();
-    const productsRef = ref(db, "products/toys");
+    const productsRef = ref(db, "products");
 
     onValue(productsRef, (snapshot) => {
-      const data = Object.values(snapshot.val());
-      setProducts(data);
+      const data = snapshot.val();
+
+      const filteredResults = Object.values(data).filter((product) => {
+        return (
+          product.type && product.type.includes("toys")
+        )
+      })
+      setProducts(filteredResults)
     });
-  }, []);
+  }, [])
 
   return (
     <Container>
@@ -28,14 +35,17 @@ function Toys() {
       <div className="align-container">
         <h2 className="beige-text category">Toys</h2>
       </div>
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          name={product.name}
-          make={product.make}
-          price={product.price}
-        />
-      ))}
+      <Row>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            img={product.img}
+            name={product.name}
+            make={product.make}
+            price={product.price}
+          />
+        ))}
+      </Row>
     </Container>
   );
 }

@@ -5,7 +5,9 @@ function BookCard(props) {
   return (
     <Col>
       <Card style={{ width: '18rem' }} className='brown-bg'>
-        <Card.Img variant="top" src={props.img} />
+      <div className='square-image-container'>
+          <Card.Img variant="top" src={props.img} alt={props.name}/>
+        </div>
         <Card.Body>
           <Card.Title className='beige-text'>{props.name}</Card.Title>
           <Card.Text className='beige-text'>Author: {props.author}</Card.Text>

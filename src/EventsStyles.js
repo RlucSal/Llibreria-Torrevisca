@@ -148,11 +148,6 @@ const EventsStyles = (
     justifyContent: "center",
     alignItems: "center",
   };
-  const carouselOverrideStyle = {
-    "&:hover .control-arrow": {
-      display: "none  !important",
-    },
-  };
 
   return {
     bodyStyle,
@@ -170,8 +165,7 @@ const EventsStyles = (
     singleGalleryImageStyle,
     imageStyle,
     imageCarouselStyle: {
-      ...imageCarouselStyle,
-      ...carouselOverrideStyle,
+      ...imageCarouselStyle
     },
   };
 };

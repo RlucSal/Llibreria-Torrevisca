@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ProductCard from "../Components/ProductCard";
+import BookCard from "../Components/BookCard";
 
 function ProductCatalogue() {
   const [searchResults, setSearchResults] = useState([]);
@@ -18,13 +19,6 @@ function ProductCatalogue() {
   const handleRefresh = () => {
     window.location.reload();
   };
-
-  // database configuration and info retrieval
-  const db = getDatabase();
-  const productsRef = ref(db, "products");
-  onValue(productsRef, (snapshot) => {
-    const data = snapshot.val();
-  });
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -40,22 +34,26 @@ function ProductCatalogue() {
     const productsRef = ref(db, "products");
     onValue(productsRef, (snapshot) => {
       const data = snapshot.val();
+
       const filteredResults = Object.values(data).filter((product) => {
         return (
-          product.name.includes(searchInput) ||
-          product.author.includes(searchInput) ||
-          product.make.includes(searchInput)
+          (product.name && product.name.includes(searchInput)) ||
+          (product.author && product.author.includes(searchInput)) ||
+          (product.make && product.make.includes(searchInput))
         );
       });
+
+
+      // checks if there are any results returned
       if (filteredResults.length === 0) {
         setNoResults(true);
       } else {
-        console.log(filteredResults);
         setNoResults(false);
         setSearchResults(filteredResults);
       }
     });
   }
+
 
   return (
     <Container>
@@ -97,16 +95,30 @@ function ProductCatalogue() {
             <i className="fa-solid fa-arrow-left-long beige-text"></i> Back to
             Categories
           </Link>
-          {searchResults.map((product) => (
-            <ProductCard
-              key={product.id}
-              name={product.name}
-              author={product.author}
-              make={product.make}
-              publisher={product.publisher}
-              price={product.price}
-            />
-          ))}
+          {searchResults.map((product) => {
+            if (product.type === "books") {
+              return (
+                <BookCard
+                  key={product.id}
+                  img={product.img}
+                  name={product.name}
+                  author={product.author}
+                  publisher={product.publisher}
+                  price={product.price}
+                />
+              );
+            } else {
+              return (
+                <ProductCard
+                  key={product.id}
+                  img={product.img}
+                  name={product.name}
+                  make={product.make}
+                  price={product.price}
+                />
+              );
+            }
+          })}
         </Row>
       ) : (
         <>
