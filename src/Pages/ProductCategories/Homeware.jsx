@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
 import { Container } from "react-bootstrap";
 import "../../app.css";
 import { Link } from "react-router-dom";
+import ProductCard from "../../Components/ProductCard";
 
 function Homeware() {
-  // database configuration and info retrieval
-  const db = getDatabase();
-  const productsRef = ref(db, "products/homeware");
-  onValue(productsRef, (snapshot) => {
-    const data = snapshot.val();
-    const searchResults = Object.values(data).filter((product) => {
-      return (
-        product.name.includes(searchInput) || product.make.includes(searchInput)
-      );
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const db = getDatabase();
+    const productsRef = ref(db, "products/homeware");
+
+    onValue(productsRef, (snapshot) => {
+      const data = Object.values(snapshot.val());
+      setProducts(data);
     });
-    console.log(searchResults);
-  });
+  }, []);
 
   return (
     <Container>
@@ -28,13 +28,11 @@ function Homeware() {
       <div className="align-container">
         <h2 className="beige-text category">Homeware</h2>
       </div>
-      {searchResults.map((product) => (
+      {products.map((product) => (
         <ProductCard
           key={product.id}
           name={product.name}
-          author={product.author}
           make={product.make}
-          publisher={product.publisher}
           price={product.price}
         />
       ))}
