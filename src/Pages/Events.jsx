@@ -8,14 +8,12 @@ const Events = () => {
   const [showJanuaryCards, setShowJanuaryCards] = useState(false);
   const [showFebruaryCards, setShowFebruaryCards] = useState(false);
   const [showMarchCards, setShowMarchCards] = useState(false);
-  const [showSingleGalleryImage, setShowSingleGalleryImage] = useState(false);
+  const [showSingleGalleryImage, setShowSingleGalleryImage] = useState(true);
 
   const {
     bodyStyle,
     h1Style,
-    h1Style1,
     buttonContainerStyle,
-    buttonContainerStyle1,
     buttonStyle,
     cardContainerStyleJan,
     cardContainerStyleFeb,
@@ -87,13 +85,6 @@ const Events = () => {
     setShowMarchCards(!showMarchCards);
     setShowSingleGalleryImage(false);
   };
-
-  const handleGalleryClick = () => {
-    setShowJanuaryCards(false);
-    setShowFebruaryCards(false);
-    setShowMarchCards(false);
-    setShowSingleGalleryImage(!showSingleGalleryImage);
-  };
   const SingleGalleryImage = ({ src }) => (
     <div style={singleGalleryImageStyle}>
       <img alt="gallery" src={src} style={imageStyle} />
@@ -118,6 +109,11 @@ const Events = () => {
         <SingleGalleryImage src="/imgs/car8.png" />
         <SingleGalleryImage src="/imgs/car9.png" />
         <SingleGalleryImage src="/imgs/car10.png" />
+        <SingleGalleryImage src="/imgs/car11.png" />
+        <SingleGalleryImage src="/imgs/car12.png" />
+        <SingleGalleryImage src="/imgs/car13.png" />
+        <SingleGalleryImage src="/imgs/car14.png" />
+        <SingleGalleryImage src="/imgs/car15.png" />
       </Carousel>
     </div>
   );
@@ -321,20 +317,6 @@ const Events = () => {
       <Row>
         <Container fluid className="page-container beige-bg">
           <div className="photo-container"> </div>
-          <h1 className="beige-text" style={h1Style1}>
-            Past Events
-          </h1>
-          <div style={buttonContainerStyle1}>
-            <Button
-              style={buttonStyle}
-              className="no-button-outline brown-bg"
-              id="input"
-              type="submit"
-              onClick={handleGalleryClick}
-            >
-              Gallery
-            </Button>
-          </div>
           <div style={cardContainerStyleGall}>
             <ImageCarousel />
           </div>
