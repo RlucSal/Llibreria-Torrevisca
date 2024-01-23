@@ -4,19 +4,19 @@ import "../../app.css"
 
 function ProductCard(props) {
   return (
-    <Col>
-      <Card style={{ width: '18rem' }} className='brown-bg'>
+    <Col className='mb-3'>
+      <Card style={{ width: '18rem' }} className='beige-bg'>
         <div className='square-image-container'>
           <Card.Img variant="top" src={props.img} alt={props.name}/>
         </div>
         <Card.Body>
-          <Card.Title className='beige-text'>{props.name}</Card.Title>
-          <Card.Text className='beige-text'>Make: {props.make}</Card.Text>
-          <Card.Text className='beige-text'>Price: {props.price}</Card.Text>
+          <Card.Title className='green-text'>{props.name}</Card.Title>
+          <Card.Text className='green-text'>Make: {props.make}</Card.Text>
+          <Card.Text className='green-text price'>Price: {props.price}</Card.Text>
         </Card.Body>
       </Card>
     </Col>
   );
 }
 
-export default ProductCard;
+export default ProductCard; 

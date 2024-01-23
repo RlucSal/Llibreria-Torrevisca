@@ -2,8 +2,9 @@
     text-decoration: none;
     padding-left: 20%;
     white-space: nowrap;
+    text-shadow: 2px 2px 5px #706233;
 }
 
 .nav {
-    background-color: transparent;
+    background-color: rgba(112,98,51,0.8);
 }

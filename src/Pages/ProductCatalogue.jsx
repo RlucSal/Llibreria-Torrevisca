@@ -10,6 +10,7 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ProductCard from "../Components/ProductCard";
 import BookCard from "../Components/BookCard";
+import NavbarEl from "../Components/NavbarEl";
 
 function ProductCatalogue() {
   const [searchResults, setSearchResults] = useState([]);
@@ -57,7 +58,11 @@ function ProductCatalogue() {
 
   return (
     <Container>
-      <h1 className="beige-text">Product Catalogue</h1>
+      <NavbarEl/>
+      <div className="align-container">
+        <h1 className="beige-text page-title">Product Catalogue</h1>
+      </div>
+      
 
       {/* Searchbar */}
       <Form onSubmit={handleSubmit}>
@@ -130,7 +135,7 @@ function ProductCatalogue() {
                   <Card.Img src="/imgs/bookshelf.PNG" />
                   <Card.ImgOverlay className="content">
                     <Card.Body>
-                      <h1 className="title beige-text">Books</h1>
+                      <h1 className="title beige-text">BOOKS</h1>
                     </Card.Body>
                   </Card.ImgOverlay>
                 </Card>
@@ -143,7 +148,7 @@ function ProductCatalogue() {
                   <Card.Img src="/imgs/toys.PNG" />
                   <Card.ImgOverlay className="content">
                     <Card.Body>
-                      <h1 className="title beige-text">Toys</h1>
+                      <h1 className="title beige-text">TOYS</h1>
                     </Card.Body>
                   </Card.ImgOverlay>
                 </Card>
@@ -161,7 +166,7 @@ function ProductCatalogue() {
                   <Card.Img src="/imgs/stationary.PNG" />
                   <Card.ImgOverlay className="content">
                     <Card.Body>
-                      <h1 className="title beige-text">Stationary</h1>
+                      <h1 className="title beige-text">STATIONARY</h1>
                     </Card.Body>
                   </Card.ImgOverlay>
                 </Card>
@@ -174,7 +179,7 @@ function ProductCatalogue() {
                   <Card.Img src="/imgs/homeware.PNG" />
                   <Card.ImgOverlay className="content">
                     <Card.Body>
-                      <h1 className="title beige-text">Homeware</h1>
+                      <h1 className="title beige-text">HOMEWARE</h1>
                     </Card.Body>
                   </Card.ImgOverlay>
                 </Card>

@@ -34,7 +34,6 @@ const App = () => {
   return (
     <Wrapper className="green-bg">
       <Router>
-        <NavbarEl />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />

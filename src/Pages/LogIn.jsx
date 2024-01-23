@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import NavbarEl from "../Components/NavbarEl";
 import {
   Form,
   Button,
@@ -42,12 +43,15 @@ const LogIn = () => {
   };
   return (
     <>
+          <Container>
+        <NavbarEl />
+      </Container>
       <Container
         fluid
         className="d-flex align-items-center justify-content-center"
         style={{
           minHeight: "100vh",
-          backgroundImage: `url('/imgs/baloon-no.png')`,
+          backgroundImage: `url('/imgs/torrevisca-book-bg.png')`,
           backgroundSize: "cover", // Adjust as needed
           backgroundPosition: "center", // Adjust as needed
         }}
@@ -55,19 +59,19 @@ const LogIn = () => {
         <div className="w-100" style={{ maxWidth: "400px" }}>
           <Card bg="light" text="dark" className="rounded shadow">
             <Card.Body>
-              <h2 className="text-center mb-4">Wellcome back</h2>
+              <h2 className="text-center mb-4">Welcome back!</h2>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleLogin}>
-                <Form.Group id="email">
+                <Form.Group className="mb-3" id="email">
                   <Form.Label>Email</Form.Label>
                   <Form.Control type="email" ref={emailRef} required />
                 </Form.Group>
-                <Form.Group id="password">
+                <Form.Group className="mb-3" id="password">
                   <Form.Label>Password</Form.Label>
                   <Form.Control type="password" ref={passwordRef} required />
                 </Form.Group>
                 <Button
-                  className="w-100"
+                  className="w-100 mb-3 no-button-outline"
                   type="submit"
                   style={{ backgroundColor: "#B0926A " }}
                 >
