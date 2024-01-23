@@ -231,6 +231,10 @@ div {
         width: 70%;
     }
 
+    .team-content {
+        flex-direction: column;
+    }
+
     .team-header {
         font-size: 8vw;
     }
@@ -240,7 +244,7 @@ div {
     }
 
     .team-text {
-        font-size: 2.5vw;
+        font-size: 4vw;
         width: 100%;
     }
 }
@@ -267,7 +271,7 @@ div {
         width: 100px
     }
     .team-text {
-        font-size: 6vw;
+        font-size: 5vw;
         width: 100%;
     }
 }
