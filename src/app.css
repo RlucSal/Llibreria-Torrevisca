@@ -16,7 +16,7 @@
 }
 
 .green-text {
-    color: #706233 !important;
+    color: #41381e !important;
 }
 
 .brown-text {
@@ -31,7 +31,53 @@
     color: #FAE7C9 !important;
 }
 
-/* ----------------- */
+/* ---- DEFAULT FONTS ---- */
+
+@font-face {
+    font-family: 'Header';
+    src: url('/fonts/LTCushion-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Text';
+    src: url('/fonts/AltoneTrial-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bold Text';
+    src: url('/fonts/AltoneTrial-Bold.ttf') format('truetype');
+}
+
+/* ----------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Header';
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Header';
+}
+
+p,
+a,
+label,
+input,
+link,
+.navlink,
+.link,
+div {
+    font-family: 'Text';
+}
 
 .logo {
     max-width: 200px;
@@ -54,6 +100,11 @@
 
 .page-container {
     min-width: 100%;
+    min-height: 80vh;
+    background-image: url(/imgs/shop_photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .page-header {
@@ -75,6 +126,8 @@
     padding-left: 5%;
     padding-bottom: 3%;
     text-shadow: 2px 2px 10px #706233;
+    font-family: 'Bold Text';
+    font-size: 4vw;
 }
 
 .content {
@@ -99,9 +152,11 @@
 .category {
     padding-top: 5%;
     padding-bottom: 5%;
+    font-size: xxx-large;
 }
 
 .page-title {
+    padding-top: 5%;
     padding-bottom: 1%;
 }
 
@@ -125,6 +180,102 @@
     object-fit: cover;
 }
 
+.section {
+    width: 100%;
+    min-height: 80vh
+}
+
+.price {
+    font-family: 'Header';
+}
+
 .carousel.carousel-slider .control-arrow:hover {
-    background: rgba(0,0,0,0)  !important
-  }
+    background: rgba(0, 0, 0, 0) !important
+}
+
+.big {
+    font-size: xxx-large;
+}
+
+.welcome-text {
+    font-size: x-large;
+    width: 50%;
+}
+
+.team-text {
+    font-size: x-large;
+    flex: 1;
+}
+
+.team-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.team-pic {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 5vw;
+    }
+
+    .welcome-header {
+        font-size: 8vw;
+    }
+
+    .welcome-text {
+        font-size: 4vw;
+        width: 70%;
+    }
+
+    .team-content {
+        flex-direction: column;
+    }
+
+    .team-header {
+        font-size: 8vw;
+    }
+
+    .heart {
+        width: 100px
+    }
+
+    .team-text {
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    .team-pic {
+        width: 80%
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 6vw;
+    }
+
+    .welcome-header {
+        font-size: 8vw;
+    }
+
+    .welcome-text {
+        font-size: 5vw;
+        width: 70%;
+    }
+
+    .team-header {
+        font-size: 8vw;
+    }
+
+    .heart {
+        width: 100px
+    }
+    .team-text {
+        font-size: 5vw;
+        width: 100%;
+    }
+}

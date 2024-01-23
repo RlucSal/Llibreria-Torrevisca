@@ -17,25 +17,21 @@ function NavbarEl() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Link className="navlink beige-text" to="/">
-              Home
+              HOME
             </Link>
-            <Link className="navlink beige-text" to="product-catalogue">
-              Product Catalogue
+            <Link className="navlink beige-text" to="/product-catalogue">
+              PRODUCT CATALOGUE
             </Link>
-            <Link className="navlink beige-text" to="Events">
-              Events
+            <Link className="navlink beige-text" to="/Events">
+              EVENTS
             </Link>
-            <Link className="navlink beige-text" to="AboutUs">
-              About Us
+            <Link className="navlink beige-text" to="/about-us">
+              ABOUT US
             </Link>
           </Nav>
           <Nav className="ml-auto">
-            <Link className="navlink beige-text" to="log-in">
-              <FontAwesomeIcon
-                icon={faUserCircle}
-                className="user-icon"
-                size="lg"
-              />
+            <Link className="navlink beige-text fa-2xl" to="/log-in">
+              <FontAwesomeIcon icon={faUserCircle} className="user-icon" />
             </Link>
           </Nav>
         </Navbar.Collapse>

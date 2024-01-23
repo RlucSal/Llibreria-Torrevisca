@@ -3,6 +3,8 @@ import { Container, Button, Row, Card } from "react-bootstrap";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import EventsStyles from "../EventsStyles";
+import NavbarEl from "../Components/NavbarEl";
+import "../app.css"
 
 const Events = () => {
   const [showJanuaryCards, setShowJanuaryCards] = useState(false);
@@ -120,8 +122,9 @@ const Events = () => {
 
   return (
     <div style={bodyStyle}>
-      <Container fluid className="page-container beige-bg">
-        <div className="photo-container"> </div>
+      <Container>
+      <NavbarEl className="w-100"/>
+        <div className=""> </div>
         <h1 className="beige-text" style={h1Style}>
           Upcoming Events
         </h1>
@@ -315,7 +318,7 @@ const Events = () => {
         </div>
       </Container>
       <Row>
-        <Container fluid className="page-container beige-bg">
+        <Container fluid className="beige-bg">
           <div className="photo-container"> </div>
           <div style={cardContainerStyleGall}>
             <ImageCarousel />
