@@ -5,6 +5,7 @@ import "../../app.css";
 import { Link } from "react-router-dom";
 import BookCard from "../../Components/BookCard";
 import { Row } from "react-bootstrap";
+import NavbarEl from "../../Components/NavbarEl";
 
 function Books() {
   const [products, setProducts] = useState([]);
@@ -28,6 +29,8 @@ function Books() {
 
 
   return (
+    <>
+    <NavbarEl />
     <Container>
       <h1 className="beige-text page-title">Product Catalogue</h1>
       <Link className="link beige-text" to={"/product-catalogue"}>
@@ -37,6 +40,7 @@ function Books() {
       <div className="align-container">
         <h2 className="beige-text category">Books</h2>
       </div>
+      <div className="container rounded-3 w-100 p-5 brown-bg">
       <Row>
         {products.map((product) => (
         <BookCard
@@ -49,7 +53,9 @@ function Books() {
         />
       ))}
       </Row>
+      </div>
     </Container>
+    </>
   );
 }
 
