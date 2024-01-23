@@ -209,8 +209,8 @@ div {
 
 .team-content {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
 .team-pic {
@@ -244,8 +244,12 @@ div {
     }
 
     .team-text {
-        font-size: 4vw;
+        font-size: 3vw;
         width: 100%;
+    }
+
+    .team-pic {
+        width: 80%
     }
 }
 

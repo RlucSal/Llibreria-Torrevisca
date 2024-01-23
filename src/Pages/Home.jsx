@@ -38,11 +38,11 @@ const Home = () => {
           <h1 className="team-header green-text big">We <img className="heart" src="/imgs/heart-img.png" width={'130px'} /> Our Team!</h1>
         </div>
         <div className="container align-container">
-          <Row className="container align-container team-content">
-            <img className="p-2" width={'100%'} src="/imgs/team-pic.PNG"></img>
+          <div className="container align-container team-content">
+            <img className="p-2 mb-3 team-pic" width={'50%'} src="/imgs/team-pic.PNG"></img>
 
-            <p className="green-text p-2 team-text text-center">Our team is at the heart of our business. They are the driving force behind our success, constantly working together to achieve our goals and exceed customer expectations. With their dedication and expertise, they ensure that we deliver the highest quality of service for our customers.</p>
-        </Row>
+            <p className="green-text p-2 mb -3 team-text text-center">Our team is at the heart of our business. They are the driving force behind our success, constantly working together to achieve our goals and exceed customer expectations. With their dedication and expertise, they ensure that we deliver the highest quality of service for our customers.</p>
+        </div>
         </div>
         
       </section>
