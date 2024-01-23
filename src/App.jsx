@@ -8,6 +8,7 @@ import {
 import SignUp from "./Pages/SignUp";
 import LogIn from "./Pages/LogIn";
 import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
 import ProductCatalogue from "./Pages/ProductCatalogue";
 import Books from "./Pages/ProductCategories/Books";
 import Toys from "./Pages/ProductCategories/Toys";
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/stationary" element={<Stationary />} />
           <Route path="/homeware" element={<Homeware />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
       </Router>
       <Footer />
