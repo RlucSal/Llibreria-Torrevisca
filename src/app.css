@@ -98,15 +98,6 @@ div {
     width: 80%;
 }
 
-.page-container {
-    min-width: 100%;
-    min-height: 80vh;
-    background-image: url(/imgs/shop_photo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .page-header {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -207,6 +198,11 @@ div {
     flex: 1;
 }
 
+.events-text {
+    font-size: x-large;
+    width: 90%;
+}
+
 .team-content {
     display: flex;
     align-items: center;
@@ -215,6 +211,55 @@ div {
 
 .team-pic {
     flex: 1;
+}
+
+.contact-btn {
+    font-size: 25px !important;
+    padding: 18px 28px !important;
+}
+
+.event-img-portrait img {
+    width: 300px;
+}
+
+.event-img-landscape img {
+    height: 255px;
+}
+
+.event-imgs {
+    width: 100%;
+    display: flex;
+}
+
+@media (max-width: 1101px) {
+.event-img-portrait img {
+    width: 250px;
+}
+
+.event-img-landscape img {
+    height: 210px;
+}
+
+}
+
+@media (max-width: 992px) {
+    .team-text {
+        font-size: 2vw;
+        width: 100%;
+    }
+
+    .contact-btn {
+        font-size: 18px !important;
+        padding: 10px 20px !important;
+    }
+
+    .event-img-portrait img {
+        width: 200px;
+    }
+    
+    .event-img-landscape img {
+        height: 166px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -251,6 +296,29 @@ div {
     .team-pic {
         width: 80%
     }
+
+    .contact-btn {
+        font-size: 18px !important;
+        padding: 10px 20px !important;
+    }
+
+    .event-img-portrait img {
+        width: 150px;
+    }
+    
+    .event-img-landscape img {
+        height: 122px;
+    }
+}
+
+@media (max-width: 590px) {
+    .event-img-portrait img {
+        width: 100px;
+    }
+    
+    .event-img-landscape img {
+        height: 78px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -274,8 +342,26 @@ div {
     .heart {
         width: 100px
     }
+
     .team-text {
         font-size: 5vw;
         width: 100%;
+    }
+    .event-img-portrait img {
+        width: 90px;
+    }
+    
+    .event-img-landscape img {
+        height: 68px;
+    }
+}
+
+@media(max-width: 430px) {
+    .event-img-portrait img {
+        width: 80px;
+    }
+    
+    .event-img-landscape img {
+        height: 59px;
     }
 }

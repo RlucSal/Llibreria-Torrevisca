@@ -125,7 +125,7 @@ const Events = () => {
       <Container>
       <NavbarEl className="w-100"/>
         <div className=""> </div>
-        <h1 className="beige-text" style={h1Style}>
+        <h1 className="beige-text page-title" style={h1Style}>
           Upcoming Events
         </h1>
         <div style={buttonContainerStyle}>
