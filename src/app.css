@@ -172,8 +172,10 @@ div {
 }
 
 .section {
+    margin-left: auto; 
+    margin-right: auto;
     width: 100%;
-    min-height: 80vh
+    min-height: 90vh
 }
 
 .price {
@@ -186,6 +188,13 @@ div {
 
 .big {
     font-size: xxx-large;
+}
+
+.social-text {
+    font-family: 'Bold Text';
+    opacity: 0.9;
+    text-align: center;
+    padding: 5%;
 }
 
 .welcome-text {
@@ -229,6 +238,10 @@ div {
 .event-imgs {
     width: 100%;
     display: flex;
+}
+
+.numbers {
+    font-family: 'Header';
 }
 
 @media (max-width: 1101px) {
