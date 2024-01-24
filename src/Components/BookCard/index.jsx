@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap';
 function BookCard(props) {
   return (
     <Col>
-      <Card style={{ width: '18rem' }} className='beige-bg'>
+      <Card style={{ width: '20rem' }} className='beige-bg mb-3'>
       <div className='square-image-container'>
           <Card.Img variant="top" src={props.img} alt={props.name}/>
         </div>
