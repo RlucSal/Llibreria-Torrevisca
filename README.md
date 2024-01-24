@@ -12,11 +12,11 @@ A website for the bookshop Llibreria Torrevisca in Cambrils, Spain. The site pro
 Application Link: https://llibreria-torrevisca.netlify.app/
 
 ## Contents
-1. [Screenshots](https://github.com/RlucSal/Llibreria-Torrevisca/edit/main/README.md#screenshots)
-2. [Usage](https://github.com/RlucSal/Llibreria-Torrevisca/edit/main/README.md#usage)
-3. [Technologies Used](https://github.com/RlucSal/Llibreria-Torrevisca/edit/main/README.md#technologies-used)
-4. [Collaborators](https://github.com/RlucSal/Llibreria-Torrevisca/edit/main/README.md#collaborators)
-5. [Licensing](https://github.com/RlucSal/Llibreria-Torrevisca/edit/main/README.md#licensing)
+1. [Screenshots](README.md#screenshots)
+2. [Usage](README.md#usage)
+3. [Technologies Used](README.md#technologies-used)
+4. [Collaborators](README.md#collaborators)
+5. [Licensing](README.md#licensing)
 
 ## Screenshots:
 ### Homepage
