@@ -27,10 +27,15 @@ const Home = () => {
         <div className="p-2">
           <h1 className=" align-container big beige-text welcome-header">Welcome to Torrevisca</h1>
         </div>
-
-        <div className="align-container mb-5">
-          <p className="text-center beige-text welcome-text">We are a locally-owned store in Cambrils, selling a wide range of products that your family will love. From toys to homeware, we select our goods to bring only the best to our customers.</p>
+        <div className="align-container">
+          <div className="mb-5 text-center welcome-text">
+            <p className="beige-text mb-3">We are a locally-owned store in Cambrils, selling a wide range of products that your family will love. From toys to homeware, we select our goods to bring only the best to our customers.</p>
+            <Link to="/product-catalogue">
+              <Button className="beige-bg green-text rounded-5 no-button-outline-beige products-btn">SEE PRODUCTS</Button>
+            </Link>
+          </div>
         </div>
+
       </section>
 
       <section className="section beige-bg">
@@ -43,7 +48,7 @@ const Home = () => {
             <div className="p-2 mb-3 team-text text-center">
               <p className="green-text">Our team is at the heart of our business. They are the driving force behind our success, constantly working together to achieve our goals and exceed customer expectations. With their dedication and expertise, they ensure that we deliver the highest quality of service for our customers.</p>
               <Link to="/about-us">
-                <Button className="green-bg yellow-text rounded-5 no-button-outline contact-btn"> CONTACT US!</Button>
+                <Button className="green-bg yellow-text rounded-5 no-button-outline-green contact-btn"> CONTACT US!</Button>
               </Link>
             </div>
           </div>
@@ -80,7 +85,7 @@ const Home = () => {
           <div className="text-center p-5 events-text">
             <p className="beige-text">We hold events for all ages, all year round! From storytelling for young children, to acclaimed writers, we like to think we cover it all. Check out our Events page to see what we've got coming up next.</p>
             <Link to="/events">
-              <Button className="beige-bg green-text rounded-5 no-button-outline contact-btn">TO EVENTS</Button>
+              <Button className="beige-bg green-text rounded-5 no-button-outline-beige contact-btn">TO EVENTS</Button>
             </Link>
           </div>
         </div>

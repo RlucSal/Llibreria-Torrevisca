@@ -79,6 +79,7 @@ div {
     font-family: 'Text';
 }
 
+
 .logo {
     max-width: 200px;
 }
@@ -92,6 +93,14 @@ div {
 
 .no-button-outline {
     border-color: #B0926A !important;
+}
+
+.no-button-outline-beige {
+    border-color: #FAE7C9 !important;
+}
+
+.no-button-outline-green {
+    border-color: #FAE7C9 !important;
 }
 
 .shop-photo {
@@ -233,6 +242,11 @@ div {
 .contact-btn {
     font-size: 25px !important;
     padding: 18px 28px !important;
+}
+
+.products-btn {
+    font-size: 20px !important;
+    padding: 15px 25px !important;
 }
 
 .event-img-portrait img {
