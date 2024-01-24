@@ -47,7 +47,7 @@ const Home = () => {
             <img className="p-2 mb-3 team-pic" width={'50%'} src="/imgs/team-pic.PNG"></img>
             <div className="p-3 mb-3 team-text text-center">
               <p className="green-text">As a team, we work together to achieve our goals and exceed customer expectations. We are committed to providing the best for our customers. At our shop, we prioritise customer satisfaction and strive to create a positive and enjoyable shopping experience. We are always ready to assist customers with their needs and ensure they leave our shop with a smile on their face. </p>
-              <Link to="/about-us">
+              <Link to="/AboutUs">
                 <Button className="green-bg yellow-text rounded-5 no-button-outline-green contact-btn"> CONTACT US!</Button>
               </Link>
             </div>
