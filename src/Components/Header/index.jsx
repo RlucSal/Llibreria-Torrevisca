@@ -1,8 +1,13 @@
 import React from "react";
+import VideoBackground from "../VideoBackground";
+import NavbarEl from "../NavbarEl";
+
 const Header = () => {
   return (
     <>
-      <h1>This is header</h1>
+      <VideoBackground >
+      <NavbarEl/>
+      </VideoBackground>
     </>
   );
 };

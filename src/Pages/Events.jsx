@@ -126,7 +126,7 @@ const Events = () => {
       <Container>
         <NavbarEl className="w-100" />
         <div className=""> </div>
-        <h1 className="beige-text" style={h1Style}>
+        <h1 className="beige-text page-title" style={h1Style}>
           Upcoming Events
         </h1>
         <div style={buttonContainerStyle}>
@@ -172,8 +172,8 @@ const Events = () => {
                 judging them, the talk will be in charge of Nua Pedrell as
                 facilitator.
               </Card.Text>
-              <Card.Text>Date: January 25, 2024</Card.Text>
-              <Card.Text>Time: 7:00 PM</Card.Text>
+              <Card.Text className="numbers">Date: January 25, 2024</Card.Text>
+              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
 
               <div
                 dangerouslySetInnerHTML={{
@@ -194,11 +194,11 @@ const Events = () => {
             <Card.Body>
               <Card.Title>StoryTelling</Card.Title>
               <Card.Text>
-                La Martina Kids&Us School, From 6pm, Storytelling in English and
-                making a craft for girls and boys from 4 to 10 years old.
+                La Martina Kids&Us School, From <span className="numbers">6</span>pm, Storytelling in English and
+                making a craft for girls and boys from four to ten years old.
               </Card.Text>
-              <Card.Text>Date: January 26, 2024</Card.Text>
-              <Card.Text>Time: 6:00 PM</Card.Text>
+              <Card.Text className="numbers">Date: January 26, 2024</Card.Text>
+              <Card.Text className="numbers">Time: 6:00 PM</Card.Text>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -225,8 +225,8 @@ const Events = () => {
                 Ferreruela. La casa de les Absències is the house of memory but
                 also of the rebellion of critical observation.
               </Card.Text>
-              <Card.Text>Date: February 16, 2024</Card.Text>
-              <Card.Text>Time: 7:00 PM</Card.Text>
+              <Card.Text className="numbers">Date: February 16, 2024</Card.Text>
+              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -251,8 +251,8 @@ const Events = () => {
                 Helena Kocsis. We invite you to enjoy an afternoon full of
                 literature accompanied by a glass of wine.
               </Card.Text>
-              <Card.Text>Date: February 29, 2024</Card.Text>
-              <Card.Text>Time: 7:00 PM</Card.Text>
+              <Card.Text className="numbers">Date: February 29, 2024</Card.Text>
+              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `<!-- Noscript content for added SEO -->
@@ -279,8 +279,8 @@ const Events = () => {
                 Catalonia. She is known for her joy, closeness and
                 professionalism.
               </Card.Text>
-              <Card.Text>Date: March 01, 2024</Card.Text>
-              <Card.Text>Time: 7:00 PM</Card.Text>
+              <Card.Text className="numbers">Date: March 01, 2024</Card.Text>
+              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `<!-- Noscript content for added SEO -->
@@ -300,12 +300,12 @@ const Events = () => {
             <Card.Body>
               <Card.Title>Cuentropia</Card.Title>
               <Card.Text>
-                Cuentropia is a cooperative that was born in 2019 as a
+                Cuentropia is a cooperative that was born in <span className="numbers">2019</span> as a
                 non-profit association, with the idea of ​​doing transformative
                 social education projects.
               </Card.Text>
-              <Card.Text>Date: March 08, 2024</Card.Text>
-              <Card.Text>Time: 6:00 PM</Card.Text>
+              <Card.Text className="numbers">Date: March 08, 2024</Card.Text>
+              <Card.Text className="numbers">Time: 6:00 PM</Card.Text>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `<!-- Noscript content for added SEO -->

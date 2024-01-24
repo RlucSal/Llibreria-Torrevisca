@@ -5,7 +5,7 @@ import "../../app.css"
 function ProductCard(props) {
   return (
     <Col className='mb-3'>
-      <Card style={{ width: '18rem' }} className='beige-bg'>
+      <Card style={{ width: '20rem' }} className='beige-bg'>
         <div className='square-image-container'>
           <Card.Img variant="top" src={props.img} alt={props.name}/>
         </div>

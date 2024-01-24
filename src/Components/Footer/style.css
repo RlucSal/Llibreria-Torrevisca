@@ -1,17 +1,17 @@
-h6 {
-    opacity: 0.8;
-    text-align: center;
-    padding: 5%;
-}
 
 .footer {
     min-height: 50px;
     justify-content: center;
     margin-top: auto;
+    font-size: smaller;
 }
 
 .wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+h5 {
+    opacity: 0.9;
 }
