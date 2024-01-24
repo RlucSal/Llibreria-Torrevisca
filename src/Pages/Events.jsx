@@ -119,7 +119,6 @@ const Events = () => {
       </Carousel>
     </div>
   );
-  console.log("Component re-rendered");
 
   return (
     <div style={bodyStyle}>
@@ -194,8 +193,10 @@ const Events = () => {
             <Card.Body>
               <Card.Title>StoryTelling</Card.Title>
               <Card.Text>
-                La Martina Kids&Us School, From <span className="numbers">6</span>pm, Storytelling in English and
-                making a craft for girls and boys from four to ten years old.
+                La Martina Kids&Us School, From{" "}
+                <span className="numbers">6</span>pm, Storytelling in English
+                and making a craft for girls and boys from four to ten years
+                old.
               </Card.Text>
               <Card.Text className="numbers">Date: January 26, 2024</Card.Text>
               <Card.Text className="numbers">Time: 6:00 PM</Card.Text>
@@ -300,9 +301,10 @@ const Events = () => {
             <Card.Body>
               <Card.Title>Cuentropia</Card.Title>
               <Card.Text>
-                Cuentropia is a cooperative that was born in <span className="numbers">2019</span> as a
-                non-profit association, with the idea of ​​doing transformative
-                social education projects.
+                Cuentropia is a cooperative that was born in{" "}
+                <span className="numbers">2019</span> as a non-profit
+                association, with the idea of ​​doing transformative social
+                education projects.
               </Card.Text>
               <Card.Text className="numbers">Date: March 08, 2024</Card.Text>
               <Card.Text className="numbers">Time: 6:00 PM</Card.Text>

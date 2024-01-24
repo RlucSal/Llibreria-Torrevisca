@@ -13,8 +13,8 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
 
   const h1Style = {
     position: "absolute",
-    top: "10%",
-    left: "50%",
+    top: "5%",
+    left: "20%",
     transform: "translateX(-50%)",
     color: "#ffffff",
   };
@@ -132,7 +132,32 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
     },
   };
 
+  // Media Queries for Responsive Design
+  const mediaQueryStyles = {
+    // Styles for mobile devices
+    "@media only screen and (max-width: 600px)": {
+      buttonStyle: {
+        marginTop: "30%",
+      },
+      cardStyle: {
+        width: "100%",
+      },
+      imageCarouselStyle: {
+        marginRight: 0,
+      },
+    },
+    // Styles for tablets
+    "@media only screen and (min-width: 601px) and (max-width: 1024px)": {
+      // Add tablet-specific styles here
+    },
+    // Styles for laptops
+    "@media only screen and (min-width: 1025px) and (max-width: 1440px)": {
+      // Add laptop-specific styles here
+    },
+  };
+
   return {
+    ...mediaQueryStyles,
     bodyStyle,
     h1Style,
     buttonContainerStyle,
