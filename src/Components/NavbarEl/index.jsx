@@ -31,10 +31,7 @@ function NavbarEl() {
           </Nav>
           <Nav className="ml-auto">
             <Link className="navlink beige-text fa-2xl" to="/log-in">
-              <FontAwesomeIcon
-                icon={faUserCircle}
-                className="user-icon"
-              />
+              <FontAwesomeIcon icon={faUserCircle} className="user-icon" />
             </Link>
           </Nav>
         </Navbar.Collapse>
