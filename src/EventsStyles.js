@@ -1,7 +1,7 @@
 const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
   const bodyStyle = {
     backgroundImage: `url('/imgs/.png')`,
-    backgroundSize: "cover",
+    backgroundSize: "64%",
     backgroundRepeat: "no-repeat",
     backgroundColor: "#706233 ",
     minHeight: "100vh",
@@ -13,16 +13,16 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
 
   const h1Style = {
     position: "absolute",
-    top: "5%",
-    left: "30%",
+    top: "10%",
+    left: "50%",
     transform: "translateX(-50%)",
     color: "#ffffff",
   };
 
   const buttonContainerStyle = {
     position: "absolute",
-    top: "42%",
-    left: "10%",
+    top: "45%",
+    left: "15%",
     transform: "translate(-50%, -50%)",
     display: "flex",
     flexDirection: "column",
@@ -32,6 +32,7 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
 
   const buttonStyle = {
     margin: "30px",
+    marginTop: "50%",
     padding: "20px 30px",
     border: "2px solid #706233",
     color: "#ffffff",
@@ -40,10 +41,10 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
 
   const cardContainerStyleJan = {
     position: "absolute",
-    top: "-2%",
-    left: "15%",
-    height: "90%",
-    width: "40%",
+    top: "5%",
+    left: "18%",
+    height: "100%",
+    width: "45%",
     display: showJanuaryCards ? "flex" : "none",
     flexDirection: "row",
     alignItems: "center",
@@ -51,10 +52,10 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
   };
   const cardContainerStyleFeb = {
     position: "absolute",
-    top: "-2%",
-    left: "15%",
-    height: "90%",
-    width: "40%",
+    top: "5%",
+    left: "18%",
+    height: "100%",
+    width: "45%",
     display: showFebruaryCards ? "flex" : "none",
     flexDirection: "row",
     alignItems: "center",
@@ -62,10 +63,10 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
   };
   const cardContainerStyleMar = {
     position: "absolute",
-    top: "-2%",
-    left: "15%",
-    height: "90%",
-    width: "40%",
+    top: "5%",
+    left: "18%",
+    height: "100%",
+    width: "45%",
     display: showMarchCards ? "flex" : "none",
     flexDirection: "row",
     alignItems: "center",
@@ -73,8 +74,8 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
   };
   const cardContainerStyleGall = {
     position: "absolute",
-    bottom: "20%",
-    marginLeft: "-3%",
+    bottom: "10%",
+    marginLeft: "5%",
     display: "flex",
     width: "45%",
     flexDirection: "column",
@@ -104,14 +105,15 @@ const EventsStyles = (showJanuaryCards, showFebruaryCards, showMarchCards) => {
     justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
-    borderRadius: "50%",
-    border: "4px solid #B0926A",
+    padding: "20px",
+    border: "5px solid #B0926A",
+    borderRadius: "10px",
   };
 
   const imageStyle = {
     maxWidth: "100%",
     maxHeight: "100%",
-    borderRadius: "50%",
+    borderRadius: "10px",
   };
 
   const imageCarouselStyle = {
