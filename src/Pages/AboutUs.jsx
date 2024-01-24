@@ -46,7 +46,7 @@ const AboutUs = () => {
               <h3>Who We Are</h3>
               <p>
                 Torrevisca is a dream come true that was founded by Pilar
-                Brandariz and Ernestina Lucena in 2015. Two lifelong friends who
+                Brandariz and Ernestina Lucena in <span className="numbers">2015</span>. Two lifelong friends who
                 came from two completely different worlds and occupations, but
                 the two of us have always shared the same values, respect, and
                 the love for a job well done and the passion that accompanies us
