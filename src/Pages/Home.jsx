@@ -40,13 +40,13 @@ const Home = () => {
 
       <section className="section beige-bg">
         <div className="align-container">
-          <h1 className="team-header green-text big">We <img className="heart" src="/imgs/heart-img.png" width={'130px'} /> Our Team!</h1>
+          <h1 className="team-header green-text big">We <img className="heart" src="/imgs/heart-img.png" width={'130px'} /> What We Do!</h1>
         </div>
         <div className="container align-container">
           <div className="container align-container team-content">
             <img className="p-2 mb-3 team-pic" width={'50%'} src="/imgs/team-pic.PNG"></img>
-            <div className="p-2 mb-3 team-text text-center">
-              <p className="green-text">Our team is at the heart of our business. They are the driving force behind our success, constantly working together to achieve our goals and exceed customer expectations. With their dedication and expertise, they ensure that we deliver the highest quality of service for our customers.</p>
+            <div className="p-3 mb-3 team-text text-center">
+              <p className="green-text">As a team, we work together to achieve our goals and exceed customer expectations. We are committed to providing the best for our customers. At our shop, we prioritise customer satisfaction and strive to create a positive and enjoyable shopping experience. We are always ready to assist customers with their needs and ensure they leave our shop with a smile on their face. </p>
               <Link to="/about-us">
                 <Button className="green-bg yellow-text rounded-5 no-button-outline-green contact-btn"> CONTACT US!</Button>
               </Link>
@@ -56,7 +56,7 @@ const Home = () => {
       </section>
 
       <section className="section">
-        <h1 className="p-5 align-container events-header beige-text">Events</h1>
+        <h1 className=" big p-5 align-container events-header beige-text">Our Events</h1>
 
         <div className="event-imgs align-container">
           <Row>
