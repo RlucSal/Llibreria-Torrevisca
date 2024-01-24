@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import EventsStyles from "../EventsStyles";
 import NavbarEl from "../Components/NavbarEl";
-import "../app.css"
+import "../app.css";
 
 const Events = () => {
   const [showJanuaryCards, setShowJanuaryCards] = useState(false);
@@ -119,11 +119,12 @@ const Events = () => {
       </Carousel>
     </div>
   );
+  console.log("Component re-rendered");
 
   return (
     <div style={bodyStyle}>
       <Container>
-      <NavbarEl className="w-100"/>
+        <NavbarEl className="w-100" />
         <div className=""> </div>
         <h1 className="beige-text page-title" style={h1Style}>
           Upcoming Events

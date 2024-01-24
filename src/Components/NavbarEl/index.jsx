@@ -25,7 +25,7 @@ function NavbarEl() {
             <Link className="navlink beige-text" to="/Events">
               EVENTS
             </Link>
-            <Link className="navlink beige-text" to="/about-us">
+            <Link className="navlink beige-text" to="/AboutUs">
               ABOUT US
             </Link>
           </Nav>
