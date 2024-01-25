@@ -2,15 +2,24 @@
 
 ## Description:
 
-Website for a bookshop. Designed with the intention to improve customer experience while simplifying the tracking of stock levels.
+A website for the bookshop Llibreria Torrevisca in Cambrils, Spain. <br> The site provides information on the store’s current products, upcoming events and the team. 
+
+<br>
+
+
 
 ## Screenshot:
 
-![image](https://github.com/RlucSal/Llibreria-Torrevisca/assets/145674108/fbf5cd8f-abe1-4a3b-b7ab-b410f7168ba7)
+<img src="./public/imgs/Screenshot.png" alt="drawing" width="1000"/>
+<br>
+
+<br>
 
 ## Link to deployed application:
+llibreria-torrevisca.netlify.app
 
-_// placeholder //_
+<br>
+<br>
 
 ## Technologies Used:
 
@@ -19,14 +28,17 @@ _// placeholder //_
 - Node.js
 - React
 
+<br>
+
 ## Collaborators:
 
 - Rosa
 - Kai
 - Kane
+<br>
+<br>
+<br>
 
-## FAQ:
-_// placeholder //_
 
 ## Licensing:
 
