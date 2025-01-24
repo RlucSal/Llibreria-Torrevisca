@@ -57,7 +57,6 @@ const Events = () => {
     document.head.appendChild(script2);
   };
 
-  // Use useEffect to load scripts once the component mounts
   useEffect(() => {
     loadEventbriteScripts("802605343187");
     loadEventbriteScripts("803801330417");
@@ -87,13 +86,15 @@ const Events = () => {
     setShowMarchCards(!showMarchCards);
     setShowSingleGalleryImage(false);
   };
+
   const SingleGalleryImage = ({ src }) => (
-    <div style={singleGalleryImageStyle}>
-      <img alt="gallery" src={src} style={imageStyle} />
+    <div className="single-gallery-image">
+      <img alt="gallery" src={src} className="image" />
     </div>
   );
+
   const ImageCarousel = () => (
-    <div style={imageCarouselStyle}>
+    <div className="image-carousel">
       <Carousel
         showArrows={true}
         showStatus={false}
@@ -121,215 +122,214 @@ const Events = () => {
   );
 
   return (
-    <div style={bodyStyle}>
-      <Container>
-        <NavbarEl className="w-100" />
-        <div className=""> </div>
-        <h1 className="beige-text page-title" style={h1Style}>
-          Upcoming Events
-        </h1>
-        <div style={buttonContainerStyle}>
-          <Button
-            style={buttonStyle}
-            className="no-button-outline brown-bg"
-            id="input"
-            type="submit"
-            onClick={handleJanuaryClick}
-          >
-            January
-          </Button>
-          <Button
-            style={buttonStyle}
-            className="no-button-outline brown-bg"
-            id="input"
-            type="submit"
-            onClick={handleFebruaryClick}
-          >
-            February
-          </Button>
-          <Button
-            style={buttonStyle}
-            className="no-button-outline brown-bg"
-            id="input"
-            type="submit"
-            onClick={handleMarchClick}
-          >
-            March
-          </Button>
-        </div>
-        <div style={cardContainerStyleJan}>
-          <Card style={cardStyle}>
-            <Card.Img
-              variant="top"
-              src="/imgs/Cercle.png"
-              style={cardImgStyle}
-            />
-            <Card.Body>
-              <Card.Title>Cercle de Dones</Card.Title>
-              <Card.Text>
-                Safe space where all women can talk calmly without anyone
-                judging them, the talk will be in charge of Nua Pedrell as
-                facilitator.
-              </Card.Text>
-              <Card.Text className="numbers">Date: January 25, 2024</Card.Text>
-              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
-
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `
-              <noscript><a href="https://www.eventbrite.co.uk/e/entradas-cercle-de-dones-802605343187" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-              <button id="eventbrite-widget-modal-trigger-802605343187" type="button" style="background-color: #8B4513; color: #ffffff; border: 2px solid #706233; border-radius: 5px;">Get Tickets</button>
-            `,
-                }}
+      <div className="events-body">
+        <Container>
+          <NavbarEl className="w-100" />
+          <h1 className="beige-text page-title">
+            Upcoming Events
+          </h1>
+          <div className="button-container">
+            <Button
+              className="no-button-outline brown-bg"
+              id="input"
+              type="submit"
+              onClick={handleJanuaryClick}
+            >
+              January
+            </Button>
+            <Button
+              className="no-button-outline brown-bg"
+              id="input"
+              type="submit"
+              onClick={handleFebruaryClick}
+            >
+              February
+            </Button>
+            <Button
+              className="no-button-outline brown-bg"
+              id="input"
+              type="submit"
+              onClick={handleMarchClick}
+            >
+              March
+            </Button>
+          </div>
+    
+          <div className="card-container-january">
+            <Card>
+              <Card.Img
+                variant="top"
+                src="/imgs/Cercle.png"
+                className="card-img"
               />
-            </Card.Body>
-          </Card>
-          <Card style={cardStyle}>
-            <Card.Img
-              variant="top"
-              src="/imgs/LaMartina.png"
-              style={cardImgStyle}
-            />
-            <Card.Body>
-              <Card.Title>StoryTelling</Card.Title>
-              <Card.Text>
-                La Martina Kids&Us School, From{" "}
-                <span className="numbers">6</span>pm, Storytelling in English
-                and making a craft for girls and boys from four to ten years
-                old.
-              </Card.Text>
-              <Card.Text className="numbers">Date: January 26, 2024</Card.Text>
-              <Card.Text className="numbers">Time: 6:00 PM</Card.Text>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `
-                  <!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.co.uk/e/storytelling-tickets-803801330417" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-<button id="eventbrite-widget-modal-trigger-803801330417"  type="button"style="background-color: #8B4513; color: #ffffff; border: 2px solid #706233; border-radius: 5px;">Get Tickets</button> 
-`,
-                }}
-              />
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={cardContainerStyleFeb}>
-          <Card style={cardStyle}>
-            <Card.Img
-              variant="top"
-              src="/imgs/Tertulia.png"
-              style={cardImgStyle}
-            />
-            <Card.Body>
-              <Card.Title>Tertúlia Poètica</Card.Title>
-              <Card.Text>
-                Presentation of the poem La casa de les Absències by Helena
-                Ferreruela. La casa de les Absències is the house of memory but
-                also of the rebellion of critical observation.
-              </Card.Text>
-              <Card.Text className="numbers">Date: February 16, 2024</Card.Text>
-              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `
-                  <!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.co.uk/e/tertulia-poetica-tickets-803803446747" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-<button id="eventbrite-widget-modal-trigger-803803446747" type="button"style="background-color: #8B4513; color: #ffffff; border: 2px solid #706233; border-radius: 5px;">Get Tickets</button>
- `,
-                }}
-              />
-            </Card.Body>
-          </Card>
-          <Card style={cardStyle}>
-            <Card.Img
-              variant="top"
-              src="/imgs/soloSe.png"
-              style={cardImgStyle}
-            />
-            <Card.Body>
-              <Card.Title>Presentació</Card.Title>
-              <Card.Text>
-                Presentation of the book 'Només sé que no es res' by Elisabeta
-                Helena Kocsis. We invite you to enjoy an afternoon full of
-                literature accompanied by a glass of wine.
-              </Card.Text>
-              <Card.Text className="numbers">Date: February 29, 2024</Card.Text>
-              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<!-- Noscript content for added SEO -->
-                  <noscript><a href="https://www.eventbrite.co.uk/e/presentacio-del-nou-llibre-d-elisabeta-helena-kocsis-tickets-803806736587" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-                  <button id="eventbrite-widget-modal-trigger-803806736587" type="button"style="background-color: #8B4513; color: #ffffff; border: 2px solid #706233; border-radius: 5px;">Get Tickets</button>
-                  
+              <Card.Body>
+                <Card.Title>Cercle de Dones</Card.Title>
+                <Card.Text>
+                  Safe space where all women can talk calmly without anyone
+                  judging them, the talk will be in charge of Nua Pedrell as
+                  facilitator.
+                </Card.Text>
+                <Card.Text className="numbers">Date: January 25, 2024</Card.Text>
+                <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                  <noscript><a href="https://www.eventbrite.co.uk/e/entradas-cercle-de-dones-802605343187" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                  <button id="eventbrite-widget-modal-trigger-802605343187" type="button" class="get-tickets-button">Get Tickets</button>
                 `,
-                }}
+                  }}
+                />
+              </Card.Body>
+            </Card>
+    
+            <Card>
+              <Card.Img
+                variant="top"
+                src="/imgs/LaMartina.png"
+                className="card-img"
               />
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={cardContainerStyleMar}>
-          <Card style={cardStyle}>
-            <Card.Img
-              variant="top"
-              src="/imgs/Gessa.png"
-              style={cardImgStyle}
-            />
-            <Card.Body>
-              <Card.Title>Presentació</Card.Title>
-              <Card.Text>
-                Gessamí Caramés is a television and culinary figure beloved in
-                Catalonia. She is known for her joy, closeness and
-                professionalism.
-              </Card.Text>
-              <Card.Text className="numbers">Date: March 01, 2024</Card.Text>
-              <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<!-- Noscript content for added SEO -->
-                  <noscript><a href="https://www.eventbrite.co.uk/e/presentacio-del-llibre-els-ranxos-de-la-gessa-tickets-803808000367" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-                  <button id="eventbrite-widget-modal-trigger-803808000367" type="button"style="background-color: #8B4513; color: #ffffff; border: 2px solid #706233; border-radius: 5px;">Get Tickets</button>
-                  `,
-                }}
+              <Card.Body>
+                <Card.Title>StoryTelling</Card.Title>
+                <Card.Text>
+                  La Martina Kids&Us School, From{" "}
+                  <span className="numbers">6</span>pm, Storytelling in English
+                  and making a craft for girls and boys from four to ten years
+                  old.
+                </Card.Text>
+                <Card.Text className="numbers">Date: January 26, 2024</Card.Text>
+                <Card.Text className="numbers">Time: 6:00 PM</Card.Text>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                      <noscript><a href="https://www.eventbrite.co.uk/e/storytelling-tickets-803801330417" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                      <button id="eventbrite-widget-modal-trigger-803801330417"  type="button" class="get-tickets-button">Get Tickets</button> 
+                    `,
+                  }}
+                />
+              </Card.Body>
+            </Card>
+          </div>
+    
+          <div className="card-container-february">
+            <Card>
+              <Card.Img
+                variant="top"
+                src="/imgs/Tertulia.png"
+                className="card-img"
               />
-            </Card.Body>
-          </Card>
-          <Card style={cardStyle}>
-            <Card.Img
-              variant="top"
-              src="/imgs/cuentropia.png"
-              style={cardImgStyle}
-            />
-            <Card.Body>
-              <Card.Title>Cuentropia</Card.Title>
-              <Card.Text>
-                Cuentropia is a cooperative that was born in{" "}
-                <span className="numbers">2019</span> as a non-profit
-                association, with the idea of ​​doing transformative social
-                education projects.
-              </Card.Text>
-              <Card.Text className="numbers">Date: March 08, 2024</Card.Text>
-              <Card.Text className="numbers">Time: 6:00 PM</Card.Text>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<!-- Noscript content for added SEO -->
-                  <noscript><a href="https://www.eventbrite.co.uk/e/cuentropia-tickets-803812132727" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-                  <button id="eventbrite-widget-modal-trigger-803812132727" type="button"style="background-color: #8B4513; color: #ffffff; border: 2px solid #706233; border-radius: 5px;">Get Tickets</button>
-                  `,
-                }}
+              <Card.Body>
+                <Card.Title>Tertúlia Poètica</Card.Title>
+                <Card.Text>
+                  Presentation of the poem La casa de les Absències by Helena
+                  Ferreruela. La casa de les Absències is the house of memory but
+                  also of the rebellion of critical observation.
+                </Card.Text>
+                <Card.Text className="numbers">Date: February 16, 2024</Card.Text>
+                <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                      <noscript><a href="https://www.eventbrite.co.uk/e/tertulia-poetica-tickets-803803446747" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                      <button id="eventbrite-widget-modal-trigger-803803446747" type="button" class="get-tickets-button">Get Tickets</button>
+                     `,
+                  }}
+                />
+              </Card.Body>
+            </Card>
+    
+            <Card>
+              <Card.Img
+                variant="top"
+                src="/imgs/soloSe.png"
+                className="card-img"
               />
-            </Card.Body>
-          </Card>
-        </div>
-      </Container>
-      <Row>
-        <Container fluid className="beige-bg">
-          <div className="photo-container"> </div>
-          <div style={cardContainerStyleGall}>
-            <ImageCarousel />
+              <Card.Body>
+                <Card.Title>Presentació</Card.Title>
+                <Card.Text>
+                  Presentation of the book 'Només sé que no es res' by Elisabeta
+                  Helena Kocsis. We invite you to enjoy an afternoon full of
+                  literature accompanied by a glass of wine.
+                </Card.Text>
+                <Card.Text className="numbers">Date: February 29, 2024</Card.Text>
+                <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                      <noscript><a href="https://www.eventbrite.co.uk/e/presentacio-del-nou-llibre-d-elisabeta-helena-kocsis-tickets-803806736587" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                      <button id="eventbrite-widget-modal-trigger-803806736587" type="button" class="get-tickets-button">Get Tickets</button>
+                    `,
+                  }}
+                />
+              </Card.Body>
+            </Card>
+          </div>
+    
+          <div className="card-container-march">
+            <Card>
+              <Card.Img
+                variant="top"
+                src="/imgs/Gessa.png"
+                className="card-img"
+              />
+              <Card.Body>
+                <Card.Title>Presentació</Card.Title>
+                <Card.Text>
+                  Gessamí Caramés is a television and culinary figure beloved in
+                  Catalonia. She is known for her joy, closeness and
+                  professionalism.
+                </Card.Text>
+                <Card.Text className="numbers">Date: March 01, 2024</Card.Text>
+                <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                      <noscript><a href="https://www.eventbrite.co.uk/e/entradas-presentacio-del-llibre-803808000367" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                      <button id="eventbrite-widget-modal-trigger-803808000367" type="button" class="get-tickets-button">Get Tickets</button>
+                    `,
+                  }}
+                />
+              </Card.Body>
+            </Card>
+    
+            <Card>
+              <Card.Img
+                variant="top"
+                src="/imgs/ElTertulianisme.png"
+                className="card-img"
+              />
+              <Card.Body>
+                <Card.Title>Presentació</Card.Title>
+                <Card.Text>
+                  The social phenomenon that led to the creation of numerous
+                  ephemeral programs on Catalan TV channels, the tertulianisme of
+                  the 21st century. Guest speaker Jordi San José.
+                </Card.Text>
+                <Card.Text className="numbers">Date: March 08, 2024</Card.Text>
+                <Card.Text className="numbers">Time: 7:00 PM</Card.Text>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                      <noscript><a href="https://www.eventbrite.co.uk/e/tertulianisme-en-directe-tickets-803812132727" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                      <button id="eventbrite-widget-modal-trigger-803812132727" type="button" class="get-tickets-button">Get Tickets</button>
+                    `,
+                  }}
+                />
+              </Card.Body>
+            </Card>
+          </div>
+    
+          <div className="gallery">
+            {showSingleGalleryImage ? (
+              <ImageCarousel />
+            ) : (
+              <div></div>
+            )}
           </div>
         </Container>
-      </Row>
-    </div>
-  );
+      </div>
+    );
+    
+  
 };
 
 export default Events;

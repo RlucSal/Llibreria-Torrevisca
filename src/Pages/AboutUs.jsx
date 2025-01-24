@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AboutStyles from "../AboutStyles";
 import NavbarEl from "../Components/NavbarEl";
 import "../app.css";
+
 
 const AboutUs = () => {
   const [formData, setFormData] = useState({
@@ -25,23 +25,20 @@ const AboutUs = () => {
   return (
     <div>
       <NavbarEl className="w-100" />
-      <div className=""> </div>
-      <h1 className="beige-text" style={AboutStyles.h1}>
-        About Us
-      </h1>
-      <div className="container" style={AboutStyles.container}>
+      <div className="about-header"> </div>
+      <h1 className="about-title beige-text">About Us</h1>
+      <div className="container about-container">
         <div className="row justify-content-center">
-          <div className="col-md-6" style={AboutStyles.wrapper}>
-            <div style={AboutStyles.imageWrapper}>
+          <div className="col-md-6 about-wrapper">
+            <div className="image-wrapper">
               <img
                 src="/imgs/PiliErne.png"
                 alt="About Us"
-                className="img-fluid"
-                style={AboutStyles.imageWrapper.image}
+                className="img-fluid about-image"
               />
             </div>
           </div>
-          <div className="col-md-6" style={AboutStyles.textContainer}>
+          <div className="col-md-6 about-text-container">
             <div className="text-container mb-4">
               <h3>Who We Are</h3>
               <p>
@@ -75,13 +72,13 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <h2 className="beige-text" style={AboutStyles.h2}>
+        <h2 className="about-subtitle beige-text">
           We can't wait to hear from you
         </h2>
-        <div style={AboutStyles.formWrapper}>
+        <div className="form-wrapper">
           <form onSubmit={handleSubmit}>
-            <div style={AboutStyles.formGroup}>
-              <label htmlFor="name" style={AboutStyles.formLabel}>
+            <div className="form-group">
+              <label htmlFor="name" className="form-label">
                 Name
               </label>
               <input
@@ -91,12 +88,11 @@ const AboutUs = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                style={AboutStyles.formControl}
                 required
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="email" style={AboutStyles.formLabel}>
+              <label htmlFor="email" className="form-label">
                 Email
               </label>
               <input
@@ -106,12 +102,11 @@ const AboutUs = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                style={AboutStyles.formControl}
                 required
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="subject" style={AboutStyles.formLabel}>
+              <label htmlFor="subject" className="form-label">
                 Subject
               </label>
               <input
@@ -121,12 +116,11 @@ const AboutUs = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                style={AboutStyles.formControl}
                 required
               />
             </div>
-            <div style={AboutStyles.formGroup}>
-              <label htmlFor="message" style={AboutStyles.formLabel}>
+            <div className="form-group">
+              <label htmlFor="message" className="form-label">
                 Message
               </label>
               <textarea
@@ -136,14 +130,12 @@ const AboutUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows="4"
-                style={AboutStyles.formControl}
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="btn btn-primary"
-              style={AboutStyles.submitButton}
+              className="btn btn-primary submit-button"
             >
               Submit
             </button>
