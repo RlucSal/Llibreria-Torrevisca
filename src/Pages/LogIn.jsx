@@ -52,8 +52,8 @@ const LogIn = () => {
         style={{
           minHeight: "100vh",
           backgroundImage: `url('/imgs/torrevisca-book-bg.png')`,
-          backgroundSize: "cover", // Adjust as needed
-          backgroundPosition: "center", // Adjust as needed
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
         }}
       >
         <div className="w-100" style={{ maxWidth: "400px" }}>

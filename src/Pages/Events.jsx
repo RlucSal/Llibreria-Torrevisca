@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Button, Row, Card } from "react-bootstrap";
+import { Container, Button, Card } from "react-bootstrap";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import EventsStyles from "../EventsStyles";
 import NavbarEl from "../Components/NavbarEl";
 import "../app.css";
 
@@ -11,27 +10,6 @@ const Events = () => {
   const [showFebruaryCards, setShowFebruaryCards] = useState(false);
   const [showMarchCards, setShowMarchCards] = useState(false);
   const [showSingleGalleryImage, setShowSingleGalleryImage] = useState(true);
-
-  const {
-    bodyStyle,
-    h1Style,
-    buttonContainerStyle,
-    buttonStyle,
-    cardContainerStyleJan,
-    cardContainerStyleFeb,
-    cardContainerStyleMar,
-    cardContainerStyleGall,
-    cardStyle,
-    cardImgStyle,
-    singleGalleryImageStyle,
-    imageStyle,
-    imageCarouselStyle,
-  } = EventsStyles(
-    showJanuaryCards,
-    showFebruaryCards,
-    showMarchCards,
-    showSingleGalleryImage
-  );
 
   const loadEventbriteScripts = (eventId) => {
     const script1 = document.createElement("script");
